@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+  color: white;
+}
+
+.highlight {
+  color: #ffcc00;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.btn-custom {
+  background: #ffcc00;
+  color: #333;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  margin-top: 20px; /* Adds spacing below the text */
+}
+
+.btn-custom:hover {
+  background: #ffaa00;
+  transform: scale(1.05);
+}

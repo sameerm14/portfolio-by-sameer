@@ -1,0 +1,154 @@
+#myInfo {
+  text-align: center;
+  left: 50%;
+  padding: 20px;
+  color: #c0c0c0;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+.autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+  margin-bottom: 7%;
+}
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  25%,
+  65% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+.autodisplay {
+  animation: autoDisplayAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation {
+  from {
+    filter: blur(10px);
+    transform: translateY(-200px) scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+.contact-container {
+  text-align: center;
+  padding: 50px 20px;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.contact-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: transparent;
+  color: #fff;
+}
+
+textarea {
+  height: 100px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  background: #ff4c4c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+.btn-submit:hover {
+  background: #ff2c2c;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.contact-info a {
+  color: silver;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  color: #ff2c2c;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: silver;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff2c2c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+}

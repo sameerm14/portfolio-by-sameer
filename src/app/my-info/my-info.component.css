@@ -1,0 +1,260 @@
+/* General Styles */
+body {
+  background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+  color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Fade-in and Slide-in effect */
+.fadeInLoad {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInLoadAnimation 1.5s ease-out forwards;
+}
+
+@keyframes fadeInLoadAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Animation */
+#myInfo {
+  color: #c0c0c0;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2.5rem;
+  font-weight: 300;
+  animation: autoDisplayAnimation 1.5s ease-out both;
+}
+
+@keyframes autoDisplayAnimation {
+  from {
+    filter: blur(10px);
+    transform: translateY(-200px) scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Main Content Container */
+.autoBlur {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px 0;
+  text-align: left;
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  25%,
+  65% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+/* Profile Image Styling */
+.myimg {
+  width: 220px;
+  height: 300px;
+  border-radius: 60px;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.myimg:hover {
+  transform: scale(1.05);
+}
+
+/* Bio Container Styling */
+.myBio {
+  text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(92px);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.myBio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* Text Styling */
+.myBio h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.text-highlight {
+  color: #c0c0c0; /* Red color */
+  font-weight: bold;
+  font-size: 2.9rem;
+  font-family: "Open Sans", sans-serif; /* Neutral and clean font */
+  text-shadow: 0px 2px 5px rgba(244, 244, 244, 0.3);
+  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.text-highlight:hover {
+  color: #c0c0c0; /* Darker red on hover */
+  text-shadow: 0px 4px 10px rgba(241, 240, 240, 0.5);
+}
+
+/* Role Description Styling */
+.role-description {
+  font-size: 2rem; /* Bigger font size */
+  color: #ddd;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.role-description:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Highlight Styling */
+.title-highlight {
+  font-size: 2.5rem; /* Even bigger for emphasis */
+  font-weight: bold;
+  color: #4e4be7;
+  background: linear-gradient(95deg, #edecea, #2671e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #e5e5e5;
+  text-shadow: 0px 2px 5px rgba(239, 227, 212, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.title-highlight:hover {
+  text-shadow: 0px 4px 10px rgba(192, 226, 239, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .autoBlur {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .myimg {
+    width: 180px;
+    height: 240px;
+  }
+
+  #myInfo {
+    font-size: 2rem;
+  }
+
+  .myBio h1 {
+    font-size: 2rem;
+  }
+
+  .text-highlight {
+    font-size: 2rem;
+  }
+
+  .role-description {
+    font-size: 1.5rem; /* Adjusted for smaller screens */
+  }
+
+  .title-highlight {
+    font-size: 2rem; /* Adjusted for smaller screens */
+  }
+}
+/* Footer Styling */
+.footer {
+  background: none !important;
+  backdrop-filter: none;
+  border-top: none;
+  box-shadow: none;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.social-links a img {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.4));
+}
+
+.social-links a:hover img {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.footer::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  margin: 10px auto;
+  border-radius: 2px;
+  opacity: 0.5;
+}
