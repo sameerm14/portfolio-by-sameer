@@ -29,17 +29,13 @@ export class MyProjectsComponent {
       ],
       github: 'https://github.com/sameer/quizapp',
     },
-    {
-      title: 'My Portfolio Website',
-      description:
-        'A personal portfolio showcasing my projects, certifications, and achievements.',
-      techStack: ['assests/images/angular.png', 'assests/images/Bootstrap.png'],
-      // Your portfolio website URL
-<<<<<<< HEAD
-      github: 'https://github.com/sameerm14/Myportfolio', // Your GitHub repository URL
-=======
-      github: 'https://github.com/sameer/portfolio', // Your GitHub repository URL
->>>>>>> bb57c910b122f39aaad7c6d50b2679483e1422ed
-    },
+   {
+  title: 'My Portfolio Website',
+  description:
+    'A personal portfolio showcasing my projects, certifications, and achievements.',
+  techStack: ['assets/images/angular.png', 'assets/images/Bootstrap.png'],
+  github: 'https://github.com/sameerm14/portfolio-by-sameer',
+},
+
   ];
 }
