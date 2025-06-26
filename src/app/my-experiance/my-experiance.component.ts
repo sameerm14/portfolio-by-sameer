@@ -17,5 +17,6 @@ export class MyExperianceComponent {
         'Choosing the right technologies and frameworks for our web project. We evaluate various options based on factors like project requirements, scalability, and team expertise.Design and Experience, Development, and Coding, which I learned. ',
       techStack: ['java', 'JavaScript', 'python', 'Mysql'],
     },
+
   ];
 }
