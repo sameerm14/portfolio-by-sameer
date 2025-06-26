@@ -1,0 +1,147 @@
+#myInfo {
+  text-align: center;
+  left: 50%;
+  padding: 20px;
+  color: #c0c0c0;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+.autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+  margin-bottom: 7%;
+}
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  25%,
+  65% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+.fadeInRight {
+  animation: fadeInRight both;
+  animation-timeline: view();
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px) scale(0.2);
+    filter: blur(20px);
+  }
+  35%,
+  65% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+    filter: blur(0);
+  }
+  100% {
+    filter: blur(20px);
+  }
+}
+
+.autodisplay {
+  animation: autoDisplayAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation {
+  from {
+    filter: blur(10px);
+    transform: translateY(-200px) scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+
+.projects-container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  border: 1px solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 15px;
+  color: white;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+}
+
+.project-info p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #bbb;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.tech-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.project-links {
+  margin-top: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  border: 1px solid gray;
+}

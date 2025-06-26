@@ -1,0 +1,13 @@
+<div class="certifications-container autoBlur">
+  <div class="certifications-grid">
+    <div class="cert-card" *ngFor="let cert of certifications">
+      <div class="cert-icon">🏆</div>
+      <h3>{{ cert.title }}</h3>
+      <p class="platform" style="color: #d4af75">{{ cert.platform }}</p>
+      <p class="year">{{ cert.year }}</p>
+      <button class="view-btn" (click)="viewCertificate(cert.url)">
+        View Certificate
+      </button>
+    </div>
+  </div>
+</div>

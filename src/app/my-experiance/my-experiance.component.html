@@ -1,0 +1,32 @@
+<h1 id="myInfo" class="autodisplay">Experience</h1>
+<div class="container my-5 autoBlur">
+  <div class="row slideInRight">
+    <div class="col-md-10 mx-auto">
+      <div class="timeline">
+        <div
+          *ngFor="let exp of experiences; let i = index"
+          class="timeline-item d-flex align-items-start"
+        >
+          <div class="timeline-dot bg-white text-black">{{ i + 1 }}</div>
+          <div class="ms-3">
+            <h4 class="fw-bold mb-1 text-white">
+              {{ exp.role }} -
+              <span style="color: #d4af75">{{ exp.company }}</span>
+            </h4>
+            <p class="mb-1 text-white">{{ exp.duration }}</p>
+            <p class="mb-2 text-white">{{ exp.description }}</p>
+            <div>
+              <span
+                *ngFor="let tech of exp.techStack"
+                class="badge me-2"
+                style="background-color: #5c6b81"
+              >
+                {{ tech }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

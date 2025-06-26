@@ -1,0 +1,28 @@
+<div class="tui">
+  <h1 id="myInfo" class="autodisplay">projects</h1>
+</div>
+<div class="projects-container autoBlur">
+  <div class="projects-grid">
+    <div class="project-card fadeInRight" *ngFor="let project of projects">
+      <div class="project-info">
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+
+        <!-- Tech Stack Icons -->
+        <div class="tech-stack">
+          <img
+            *ngFor="let tech of project.techStack"
+            [src]="tech"
+            class="tech-icon"
+          />
+        </div>
+
+        <div class="project-links">
+          <a [href]="project.github" target="_blank" class="btn"
+            >View on GitHub</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,94 @@
+#myInfo {
+  text-align: center;
+  left: 50%;
+  padding: 20px;
+  color: #c0c0c0;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+.autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+  margin-bottom: 7%;
+}
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  25%,
+  65% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+.slideInRight {
+  animation: slideInRight both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 50%;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+.autodisplay {
+  animation: autoDisplayAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation {
+  from {
+    filter: blur(10px);
+    transform: translateY(-200px) scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+
+.timeline {
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid white;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timeline-dot {
+  width: 40px;
+  height: 40px;
+  line-height: 40px; /* Ensures the text is vertically centered */
+  text-align: center;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* Optional for visibility */
+  color: black; /* Optional for contrast */
+  min-width: 40px; /* Ensures uniform width */
+  min-height: 40px;
+}

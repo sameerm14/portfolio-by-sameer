@@ -1,0 +1,53 @@
+<h1 id="myInfo" class="autodisplay">📩 Contact Me</h1>
+<div class="contact-container">
+  <div class="contact-grid autoBlur">
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form
+        action="mailto:sameernadaf@example.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" name="name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" name="email" required />
+        </div>
+        <div class="form-group">
+          <textarea
+            placeholder="Your Message"
+            name="message"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Social Links -->
+    <div class="contact-info">
+      <p>
+        <strong>Gmail : </strong>
+        <a [attr.href]="'mailto:' + email">{{ email }}</a>
+      </p>
+      <p>
+        <strong>Phone : </strong> <a href="tel:+9353015312">+91 9353015312</a>
+      </p>
+      <div class="social-icons">
+        <a
+          href="https://www.linkedin.com/in/sameer-nadaf-logged/"
+          target="_blank"
+          class="linkedin"
+          >🔗 LinkedIn</a
+        >
+        <a href="https://github.com/sameerm14" target="_blank" class="github"
+          >🐙 GitHub</a
+        >
+        <a href="https://wa.me/919353015312" target="_blank" class="whatsapp"
+          >💬 WhatsApp</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

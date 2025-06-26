@@ -1,0 +1,94 @@
+#myInfo {
+  text-align: center;
+  left: 50%;
+  padding: 20px;
+  color: #c0c0c0;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+.autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+  margin-bottom: 7%;
+}
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  25%,
+  65% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+.slideInRight {
+  animation: slideInRight both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.autodisplay {
+  animation: autoDisplayAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation {
+  from {
+    filter: blur(10px);
+    transform: translateY(-200px) scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+.resume-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  background: red;
+  color: aliceblue;
+}
+
+.container {
+  border: 1px solid transparent; /* Initially transparent border */
+  border-radius: 10px;
+  padding: 20px;
+  transition: border 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+
+.container:hover {
+  border: 1px solid white;
+  transition: 1s ease-in-out;
+  border-radius: 10px;
+  padding: 20px;
+}

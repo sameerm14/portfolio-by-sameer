@@ -1,0 +1,143 @@
+#myInfo {
+  text-align: center;
+  left: 50%;
+  padding: 20px;
+  color: #c0c0c0;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+.autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+  margin-bottom: 7%;
+}
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  25%,
+  65% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+.autodisplay {
+  animation: autoDisplayAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation {
+  from {
+    filter: blur(10px);
+    transform: translateY(-200px) scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+
+.fadeInRight {
+  animation: fadeInRight 1s ease-out forwards;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px) scale(0.2);
+    filter: blur(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.autoBlur {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the div horizontally */
+  gap: 80px; /* Increased space between image and bio */
+  padding: 20px;
+  text-align: left;
+}
+
+.certifications-container {
+  text-align: center;
+  padding: 50px 20px;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  background: #121212;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
+}
+
+.cert-icon {
+  font-size: 2rem;
+}
+
+.platform {
+  font-style: italic;
+  color: #ff4c4c;
+}
+
+.year {
+  font-weight: bold;
+  color: #bbb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.view-btn {
+  margin-top: 10px;
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.view-btn:hover {
+  background-color: white;
+  color: black;
+}

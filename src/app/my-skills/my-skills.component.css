@@ -1,0 +1,141 @@
+/* Initial hidden state before animation */
+#myInfo {
+  text-align: center;
+  left: 50%;
+  padding: 20px;
+  color: #c0c0c0;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+}
+
+.autoBlur {
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+  margin-bottom: 7%;
+}
+
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  25%,
+  65% {
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    filter: blur(40px);
+    opacity: 0;
+  }
+}
+
+.autodisplay {
+  animation: autoDisplayAnimation both;
+  animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation {
+  from {
+    filter: blur(10px);
+    transform: translateY(-200px) scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0) scale(1);
+  }
+}
+
+.slider {
+  position: relative;
+  width: 70%;
+  overflow: hidden; /* Changed to visible to allow tooltips to overflow */
+  padding: 20px 50px; /* Increased padding for left & right */
+  margin: 0 auto 50px auto; /* Center horizontally */
+  display: flex;
+  justify-content: center;
+}
+
+/* Wrapper to duplicate images for smooth looping */
+.slider .list-wrapper {
+  display: flex;
+  width: max-content;
+}
+
+/* Image container */
+.slider .list {
+  display: flex;
+  gap: 40px; /* Space between images */
+  align-items: center;
+  animation: scrollEffect 35s linear infinite; /* Slower animation */
+}
+
+/* Each item */
+.slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  flex-shrink: 0;
+  position: relative; /* Ensure tooltip is positioned relative to the item */
+}
+
+/* Images */
+.slider .list .item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Continuous Scrolling Effect */
+@keyframes scrollEffect {
+  from {
+    transform: translateX(60%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hover to Pause */
+.slider:hover .list {
+  animation-play-state: paused;
+}
+
+/* Duplicate the list for infinite effect */
+.slider .list-wrapper {
+  display: flex;
+  width: max-content;
+}
+
+.slider .list-wrapper .list {
+  animation: scrollEffect 15s linear infinite; /* Slower speed */
+  display: flex;
+}
+
+/* Tooltip styling */
+.item {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 10; /* Increased z-index to ensure tooltip is above other elements */
+  top: 70%; /* Position above the image */
+  left: 50%;
+  transform: translateX(-50%); /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Ensure tooltip doesn't interfere with hover */
+}
+
+.item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
