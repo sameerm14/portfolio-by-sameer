@@ -32,12 +32,7 @@ export class MyCertificationsComponent {
       year: '2024',
       url: 'https://drive.google.com/file/d/1XB5Ec0V7kWdcAiFR2mj0I44waLUQPQZQ/preview', // Replace with actual URL
     },
-    {
-      title: 'Web Development Workshop',
-      platform: 'KLS Gogte Institute of Technology Belagavi',
-      year: '2024',
-      url: 'https://drive.google.com/file/d/11md-r2FUhSwZUShpLkhWomCKTmix5xmb/preview', // Replace with actual URL
-    },
+    
   ];
   viewCertificate(url: string) {
     window.open(url, '_blank');
