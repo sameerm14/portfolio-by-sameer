@@ -18,7 +18,7 @@ export class MyExperianceComponent {
       techStack: ['java', 'JavaScript', 'python', 'Mysql'],
     },
 {
-  company: 'Peerbits',
+  company: 'Octaware',
   role: 'Back End Developer',
   duration: '(Feb 2022 – Jun 2025)',
   description:
