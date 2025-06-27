@@ -38,12 +38,6 @@ export class MyCertificationsComponent {
       year: '2024',
       url: 'https://drive.google.com/file/d/11md-r2FUhSwZUShpLkhWomCKTmix5xmb/preview', // Replace with actual URL
     },
-    {
-      title: 'Internship at Creintors Automation',
-      platform: 'Creintors Automation Pvt Ltd',
-      year: '2024',
-      url: 'https://example.com/creintors-internship-cert.pdf', // Replace with actual URL
-    },
   ];
   viewCertificate(url: string) {
     window.open(url, '_blank');
