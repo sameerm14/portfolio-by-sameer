@@ -16,8 +16,7 @@ export class MyProjectsComponent {
         'assests/images/react.png',
         'assests/images/Node.png',
         'assests/images/MongoDB.png',
-      ],
-      github: 'https://github.com/sameerm14/-CODE-BY-SAMEER-NADAF-.git',
+      ]
     },
     {
       title: 'QuizApp - Interactive Quiz Platform',
@@ -26,15 +25,14 @@ export class MyProjectsComponent {
         'assests/images/react.png',
         'assests/images/Django.png',
         'assests/images/mysqld.png',
-      ],
-      github: 'https://github.com/sameer/quizapp',
-    },
+      ]
+     },
    {
   title: 'My Portfolio Website',
   description:
     'A personal portfolio showcasing my projects, certifications, and achievements.',
-  techStack: ['assets/images/angular.png', 'assets/images/Bootstrap.png'],
-  github: 'https://github.com/sameerm14/portfolio-by-sameer',
+  techStack: ['assets/images/angular.png', 'assets/images/Bootstrap.png']
+ 
 },
 
   ];
