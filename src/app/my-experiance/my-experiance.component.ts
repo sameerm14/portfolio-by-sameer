@@ -18,12 +18,12 @@ export class MyExperianceComponent {
       techStack: ['java', 'JavaScript', 'python', 'Mysql'],
     },
 {
-  company: 'Octaware',
-  role: 'Back End Developer',
-  duration: '(Feb 2022 – Jun 2025)',
+  company: 'Creintors Automation Pvt Ltd',
+  role: 'Software Engineering Intern',
+  duration: '(Apr 2024 – Jun 2024)',
   description:
-    'Backend Java Developer with 3.1 years of experience in designing, developing, and maintaining scalable Java-based web applications. Skilled in Spring Boot, REST APIs, Hibernate, and Microservices architecture. Experienced in MySQL and integrating third-party services like Stripe. Familiar with Postman, Git, Jenkins, and Agile methodology. Good understanding of API security, JWT authentication, and cloud deployment.',
-  techStack: ['Java', 'Spring Boot', 'REST APIs', 'Hibernate', 'MySQL', 'JWT', 'Git', 'Postman', 'Jenkins'],
+    'Software Engineering Intern with hands-on experience in preparing Software Requirement Specification (SRS) documents for enterprise automation projects. Involved in requirement gathering, technical documentation, and early-stage software planning. Strengthened understanding of SDLC phases, teamwork, and communication within an agile environment.',
+  techStack: ['SRS', 'Requirement Gathering', 'Documentation', 'SDLC', 'Agile'],
 },
 
   ];
